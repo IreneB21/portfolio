@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irène Bouslama - Développeuse Web - Projet</title>
+    <script src="projects.js" defer></script>
+    <script src="https://kit.fontawesome.com/f61418b52c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span>Irène Bouslama</span>
+        <img src="images/arrow-header.png" alt="">
+        <nav>
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-btn" for="menu-toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu-box">
+                <li><a class="menu-item" href="index.html#about-section">À propos</a></li>
+                <li><a class="menu-item" href="index.html#projects-section">Mes projets</a></li>
+                <li><a class="menu-item" href="index.html#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bulle un"></div>
+    <div class="bulle deux"></div>
+    <main class="main-project">
+        <section class="illustrations-section">
+            <div class="illustration-project" id="illustration-1">
+                <i class="fa-solid fa-caret-left" id="previous" onclick="goToPreviousImg()"></i>
+                <i class="fa-solid fa-caret-right" id="next" onclick="goToNextImg()"></i>
+                <div class="photo-preview-box" id="diapo"></div>
+            </div>
+            <div class="illustration-project" id="illustration-2"></div>
+        </section>
+        <section class="title-description-section">
+            <h1 id="title"></h1>
+            <p id="description"></p>
+            <a href="./index.html#presentation-projects" class="subtitle">Retour</a>
+        </section>
+    </main>
+</body>
+</html>
