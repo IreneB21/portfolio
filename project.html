@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irène Bouslama - Développeuse Web - Projet</title>
+
     <script src="projects.js" defer></script>
+    <script src="darkmode.js" defer></script>
     <script src="https://kit.fontawesome.com/f61418b52c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="stylesheet" href="css/large-screen.css" media="screen and (min-width: 1400px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <span>Irène Bouslama</span>
         <img src="images/arrow-header.png" alt="">
+        <div>
+            <i class="fa-solid fa-circle-half-stroke" id="darkMode"></i>
+        </div>
         <nav>
             <input id="menu-toggle" type="checkbox" />
             <label class="menu-btn" for="menu-toggle">
@@ -46,4 +56,5 @@
         </section>
     </main>
 </body>
+
 </html>
