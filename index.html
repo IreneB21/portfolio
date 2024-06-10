@@ -11,8 +11,6 @@
     <script src="https://kit.fontawesome.com/f61418b52c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 800px)">
-    <link rel="stylesheet" href="css/large-screen.css" media="screen and (min-width: 1400px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
@@ -22,11 +20,16 @@
     <header>
         <span>Irène Bouslama</span>
         <img src="images/arrow-header.png" alt="">
-        <div>
-            <i class="fa-solid fa-circle-half-stroke" id="darkMode"></i>
+        <div class="darkmode-checkbox-container">
+            <input type="checkbox" class="darkmode-checkbox" id="darkmode-checkbox">
+            <label for="darkmode-checkbox" class="darkmode-checkbox-label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <span class="darkmode-ball"></span>
+            </label>
         </div>
         <nav>
-            <input id="menu-toggle" type="checkbox" />
+            <input id="menu-toggle" type="checkbox">
             <label class="menu-btn" for="menu-toggle">
                 <span></span>
             </label>
@@ -69,6 +72,7 @@
                     et tout mon engagement à un projet qui me permettra de grandir en tant que développeuse.</p>
                 <i class="fa-solid fa-caret-down" onclick="scrollToProjects()"></i>
             </div>
+            <i class="fa-solid fa-caret-down" onclick="scrollToProjects()" id="mobile-about-scroll"></i>
         </section>
         <section id="projects-section">
             <div class="presentation-projects" id="presentation-projects">
@@ -88,16 +92,15 @@
         <i class="fa-solid fa-caret-down scroll-to-contact" onclick="scrollToContact()"></i>
         <section id="contact-section">
             <div class="list-contact-container">
-                <a href="https://www.linkedin.com/in/ir%C3%A8ne-bouslama/" target="_blank" rel="noopener"
-                    rel="noreferrer">
+                <a href="https://www.linkedin.com/in/ir%C3%A8ne-bouslama/" target="_blank" rel="noopener noreferrer">
                     <p class="subtitle">Linkedin</p>
                 </a>
-                <a href="https://github.com/IreneB21" target="_blank" rel="noopener" rel="noreferrer">
+                <a href="https://github.com/IreneB21" target="_blank" rel="noopener noreferrer">
                     <p class="subtitle">GitHub</p>
                 </a>
                 <p class="subtitle">irenebouslama@gmail.com</p>
                 <a href="">
-                    <p class="subtitle" target="_blank" rel="noopener" rel="noreferrer">Curriculum Vitae</p>
+                    <p class="subtitle" target="_blank" rel="noopener noreferrer">Curriculum Vitae</p>
                 </a>
             </div>
             <div class="presentation-contact">

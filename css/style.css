@@ -24,10 +24,13 @@
     --second-bubble-color: #1A2A42;
 }
 
-* {
+* { box-sizing: border-box; }
+
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -44,9 +47,7 @@ main {
     align-items: center;
 }
 
-section {
-    min-height: 80vh;
-}
+section { min-height: 80vh; }
 
 h1 {
     font-family: var(--font-title);
@@ -71,9 +72,7 @@ p {
     margin-top: var(--spacing);
 }
 
-span {
-    font-weight: 200;
-}
+span { font-weight: 200; }
 
 a {
     text-decoration: none;
@@ -85,27 +84,9 @@ a {
     cursor: pointer;
     color: var(--text-color);
     transition: all 0.8s ease-in-out;
-    animation: bouncing 0.5s;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
-    animation-delay: 10s;
-    animation-iteration-count: 7;
 
     &:hover {
         scale: 1.4;
-        animation-play-state: paused;
-    }
-}
-
-@keyframes bouncing {
-    from {
-        transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
-    to {
-        transform: translate3d(0, 3rem, 0);
-        transform: translate3d(0, 3rem, 0);
     }
 }
 
@@ -123,22 +104,50 @@ header {
     text-transform: uppercase;
 }
 
-header img {
-    margin-left: 112px;
-}
-
-.fa-circle-half-stroke {
-    font-size: 1.5rem;
-    cursor: pointer;
+.darkmode-checkbox-container {
     position: absolute;
     right: 7rem;
-    top: 4.7rem;
-    color: var(--text-color);
+    top: 4.5rem;
 }
 
-#menu-toggle {
+.darkmode-checkbox {
     opacity: 0;
+    position: absolute;
 }
+  
+.darkmode-checkbox-label {
+    background-color: #111;
+    width: 3.1rem;
+    height: 1.6rem;
+    border-radius: 3.1rem;
+    position: relative;
+    padding: 0.3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon { color: #f6f8f9; }
+
+.fa-sun { color: #f1f9c3; }
+
+.darkmode-checkbox-label .darkmode-ball {
+  background-color: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+  position: absolute;
+  left: 0.125rem;
+  top: 0.125rem;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.darkmode-checkbox:checked + .darkmode-checkbox-label .darkmode-ball {
+  transform: translateX(1.5rem);
+}
+
+#menu-toggle { opacity: 0; }
 
 #menu-toggle:checked+.menu-btn>span {
     transform: rotate(45deg);
@@ -213,9 +222,7 @@ header img {
     padding-top: 30px;
 }
 
-.menu-item:hover {
-    font-size: 1.1rem;
-}
+.menu-item:hover { font-size: 1.1rem; }
 
 /*   LANDING PAGE   */
 
@@ -234,9 +241,7 @@ header img {
     margin-bottom: 5vh;
 }
 
-#landing-page i {
-    margin-top: 9vh;
-}
+#landing-page i { margin-top: 9vh; }
 
 .bulle.un {
     height: 45vh;
@@ -271,13 +276,11 @@ header img {
     box-shadow: var(--shadow);
 }
 
-#about-section i {
-    margin-top: 4vh;
-}
+#about-section i { margin-top: 4vh; }
 
-.presentation-container {
-    margin-left: 5rem;
-}
+#mobile-about-scroll { display: none; }
+
+.presentation-container { margin-left: 5rem; }
 
 .bulle.trois {
     height: 45vh;
@@ -311,7 +314,6 @@ header img {
 .presentation-projects {
     max-width: 36%;
     margin-right: 10rem;
-    ;
 }
 
 .list-projects-container {
@@ -384,9 +386,7 @@ header img {
     position: relative;
 }
 
-#illustration-2 {
-    min-height: 10em;
-}
+#illustration-2 { min-height: 10em; }
 
 #previous,
 #next {
@@ -401,22 +401,16 @@ header img {
     }
 }
 
-#previous {
-    left: -2rem;
-}
+#previous { left: -2rem; }
 
-#next {
-    right: -2rem;
-}
+#next { right: -2rem; }
 
 .title-description-section {
     max-width: 36%;
     margin-left: 7rem;
 }
 
-.main-project p {
-    margin-bottom: var(--spacing);
-}
+.main-project p { margin-bottom: var(--spacing); }
 
 .title-description-section .subtitle {
     transition: all 0.4s ease-in;
@@ -475,6 +469,224 @@ header img {
     right: 28vw;
 }
 
-.scroll-to-landing {
-    rotate: 180deg;
+.scroll-to-landing { rotate: 180deg; }
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    main { backdrop-filter: blur(1.3rem); }
+
+    header {
+        padding: var(--spacing);
+    }
+
+    header img { display: none; }
+
+    h1 { 
+        font-size: 2.4rem; 
+        margin-bottom: 5.5vh;
+    }
+
+    .subtitle {
+        font-size: 0.7rem;
+        padding: 0.7rem 2rem;;
+    }
+
+    p { line-height: 1.5; }
+
+    .darkmode-checkbox-container {
+        right: 7rem;
+        top: 1.4rem;
+    }
+
+    .darkmode-checkbox-label {
+        width: 3rem;
+        height: 1.4rem;
+        padding: 0.3rem;
+    }
+    
+    .darkmode-checkbox-label .darkmode-ball {
+      width: 1.1rem;
+      height: 1.1rem;
+      left: 0.135rem;
+      top: 0.165rem;
+    }
+
+    .menu-btn { top: 2rem; }
+
+    .menu-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item { padding: 10px 20px; }
+
+    #landing-page { padding-top: 18vh; }
+
+    #landing-page h1 {
+        font-size: 4rem;
+        max-width: 67%;
+    }
+
+    #landing-page i { margin-top: 13vh; }
+
+    .bulle.un {
+        height: 42vh;
+        top: 27vh;
+        left: 24vw;
+    }
+    
+    .bulle.deux {
+        top: 30vh;
+        right: 22vw;
+    }
+
+    #about-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        padding-top: 13vh;
+    }
+
+    #about-section img { max-height: 40vh; }
+
+    .presentation-container {
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+
+    .presentation-container i { display: none }
+
+    #mobile-about-scroll { display: initial; }
+
+    .bulle.trois {
+        height: 42vh;
+        top: 127vh;
+        left: 24vw;
+    }
+    
+    .bulle.quatre {
+        top: 128vh;
+        right: 22vw;
+    }
+
+    #projects-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        margin-top: 8vh;
+    }
+
+    .presentation-projects {
+        max-width: initial;
+        margin-right: initial;
+    }
+
+    .list-projects-container {
+        margin-top: 8vh;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bulle.cinq {
+        height: 42vh;
+        top: 302vh;
+        left: 24vw;
+    }
+    
+    .bulle.six {
+        top: 303vh;
+        right: 22vw;
+    }
+
+    .main-project {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4vh;
+        gap: 1rem;
+    }
+
+    .title-description-section, .illustrations-section {
+        margin: 0;
+        padding: 1rem 1.5rem;
+        min-height: initial;
+    }
+
+    .title-description-section {
+        max-width: initial;
+        margin-left: initial;
+    }
+
+    .illustration-project { min-width: 16em; }
+
+    #illustration-1 { min-height: 10em; }
+
+    #illustration-2 { min-height: 6em; }
+
+    #contact-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2rem 1rem;
+        margin-top: 16vh;
+    }
+
+    .list-contact-container {
+        width: 100%;
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+
+    .presentation-contact {
+        margin-left: initial;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .bulle.sept {
+        height: 42vh;
+        top: 414vh;
+        left: 24vw;
+    }
+    
+    .bulle.huit {
+        top: 415vh;
+        right: 22vw;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .fa-caret-down { font-size: 4.6rem; }
+    
+    h1 {
+        font-size: 4.7rem;
+        margin-bottom: 7.5vh;
+    }
+    
+    .subtitle { font-size: 1.4rem; }
+    
+    p {
+        margin-top: var(--spacing);
+        font-size: 1.4rem;
+    }
+    
+    header img { margin-left: 214px; }
+    
+    #landing-page { padding-top: 27vh; }
+    
+    #landing-page h1 { font-size: 6.4rem; }
+    
+    .list-projects-container .subtitle { padding: 1rem 3.8rem; }
+    
+    .illustration-project { min-width: 29em; }
+    
+    #illustration-1 { min-height: 20em; }
+    
+    #illustration-2 { min-height: 12em; }
+    
+    .list-contact-container { padding-top: 13vh; }
 }
