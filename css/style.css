@@ -477,7 +477,10 @@ header {
         padding: 0 1rem;
     }
 
-    main { backdrop-filter: blur(1.3rem); }
+    main { 
+        backdrop-filter: blur(1.3rem); 
+        z-index: 1;
+    }
 
     header {
         padding: var(--spacing);
@@ -534,6 +537,10 @@ header {
     }
 
     #landing-page i { margin-top: 13vh; }
+
+    .bulle {
+        z-index: 0;
+    }
 
     .bulle.un {
         height: 42vh;
