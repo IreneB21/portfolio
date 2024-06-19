@@ -636,11 +636,7 @@ header {
     .bulle {
         z-index: 0;
     }
-
-    main {
-        z-index: 1;
-    }
-
+    
     .fa-caret-down {
         font-size: 4.6rem;
     }
