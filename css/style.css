@@ -635,10 +635,6 @@ header {
 }
 
 @media screen and (min-width: 1400px) {
-    main {
-        z-index: 1;
-    }
-    
     .fa-caret-down {
         font-size: 4.6rem;
     }
