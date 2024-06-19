@@ -514,6 +514,7 @@ header {
     main {
         backdrop-filter: blur(1.3rem);
         z-index: 1;
+        position: absolute;
     }
 
     header {
