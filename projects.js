@@ -16,7 +16,7 @@ const siteCathy = {
     id: "sitecathy",
     title: "Cathy Lourenço, psychologue",
     description: "Ce projet, réalisé pour une psychologue qui souhaite un site à la fois coloré et sobre, classique et chaleureux, dispose d'un formulaire de contact grâce auquel elle recevra par email le message et les coordonnées des utilisateurs souhaitant prendre rendez-vous.",
-    illustration: ['./images/site-cathy/illustration1.png', './images/site-cathy/illustration2.png', './images/site-cathy/illustration3.png', './images/site-cathy/illustration4.png', './images/site-cathy/illustration5.png', './images/site-cathy/illustration6.png']
+    illustration: ['./images/site-cathy/illustration1.png', './images/site-cathy/illustration2.png', './images/site-cathy/illustration3.png', './images/site-cathy/illustration4.png', './images/site-cathy/illustration5.png']
 };
 
 const aPenLife = {
@@ -29,44 +29,52 @@ const aPenLife = {
 const projects = [monCoinCadeau, siteClaire, siteCathy, aPenLife];
 let currentAlbum;
 let currentIndex;
-let currentImg;
 let maxIndex;
 
 // Display project elements (title, description, illustration)
 
-window.onload = (event) => {
-    const project = window.location.search.substring(1).replaceAll('-', '');
-    const title = document.getElementById('title');
-    const description = document.getElementById('description');
-    const illustrations = document.getElementsByClassName('illustration-project');
+const title = document.getElementById('title');
+const description = document.getElementById('description');
+const illustrations = document.getElementsByClassName('illustration-project');
 
-    for(let i=0; i<projects.length; i++) {
-        if (project === projects[i].id) {
-            title.textContent = projects[i].title;
-            description.textContent = projects[i].description;
-            illustrations[0].setAttribute('style', 'background-image: url(' + projects[i].illustration[0] + ')');
-            illustrations[1].setAttribute('style', 'background-image: url(' + projects[i].illustration[1] + ')');
-            currentIndex = 0;
-            currentAlbum = projects[i];
-        }
+window.onload = () => {
+    const projectId = window.location.search.substring(1).replaceAll('-', '');
+    const project = projects.find(project => project.id === projectId);
+
+    if(!project) {
+        title.textContent = "Projet non trouvé !";
+        illustrations[0].setAttribute('style', 'display: none');
+        illustrations[1].setAttribute('style', 'display: none');
+        return;
     }
+
+    title.textContent = project.title;
+    description.textContent = project.description;
+    illustrations[0].setAttribute('style', 'background-image: url(' + project.illustration[0] + ')');
+    illustrations[1].setAttribute('style', 'background-image: url(' + project.illustration[1] + ')');
+    currentIndex = 0;
+    currentAlbum = project;
+    maxIndex = currentAlbum.illustration.length - 1;
 }
 
 // Carrousel illustrations
 
 function goToPreviousImg() {
-    // if (currentIndexImg == 0) {
-    //     currentIndexImg--;
-    //     document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
-    // } else {
-    illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex -1] + ')');
+    if (currentIndex === 0) {
+        illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[maxIndex] + ')');
+        currentIndex = maxIndex;
+    } else {
+        illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex - 1] + ')');
+        currentIndex--;
+    }
 }
 
 function goToNextImg() {
-    // if (currentIndexImg < maxIndex) {
-    //     currentIndexImg++;
-    //     document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
-    // } else {
-    illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex +1] + ')');
-       // currentIndexImg = 0;
+    if (currentIndex === maxIndex) {
+        illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[0] + ')');
+        currentIndex = 0;
+    } else {
+        illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex + 1] + ')');
+        currentIndex++;
+    }
 }

@@ -365,12 +365,12 @@ header {
 }
 
 #illustration-1 {
-    min-height: 16em;
+    min-height: 13.9em;
     position: relative;
 }
 
 #illustration-2 {
-    min-height: 10em;
+    min-height: 7.9em;
 }
 
 #previous,
@@ -452,6 +452,7 @@ header {
 
     main {
         backdrop-filter: blur(1.3rem);
+        -webkit-backdrop-filter: blur(5px);
         position: absolute;
         z-index: 2;
     }
@@ -463,6 +464,16 @@ header {
 
     .bulle {
         z-index: 0;
+    }
+
+    .bulle.un {
+        top: 31vh;
+        left: 28vw;
+    }
+
+    .bulle.deux {
+        top: 33vh;
+        right: 26vw;
     }
 
     header img {
