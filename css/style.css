@@ -468,12 +468,12 @@ header {
 
     .bulle.un {
         top: 31vh;
-        left: 28vw;
+        left: 16%;
     }
 
     .bulle.deux {
         top: 33vh;
-        right: 26vw;
+        right: 17%;
     }
 
     header img {
@@ -673,7 +673,7 @@ header {
     }
 
     #landing-page {
-        padding-top: 27vh;
+        padding-top: 27%;
     }
 
     #landing-page h1 {
