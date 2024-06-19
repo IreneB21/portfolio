@@ -97,12 +97,32 @@ a {
     }
 }
 
+.bulle.un {
+    height: 45vh;
+    width: 34vw;
+    background-color: var(--first-bubble-color);
+    border-radius: 61% 39% 45% 55% / 61% 24% 76% 39%;
+    position: fixed;
+    top: 32vh;
+    left: 30vw;
+}
+
+.bulle.deux {
+    height: 30vh;
+    width: 24vw;
+    background-color: var(--second-bubble-color);
+    border-radius: 20% 80% 45% 55% / 61% 62% 38% 39%;
+    position: fixed;
+    top: 33vh;
+    right: 28vw;
+}
+
 /*   HEADER   */
 
 header {
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     padding: calc(var(--spacing) * 2);
     padding-bottom: var(--spacing);
     display: flex;
@@ -260,26 +280,6 @@ header {
     margin-top: 9vh;
 }
 
-.bulle.un {
-    height: 45vh;
-    width: 34vw;
-    background-color: var(--first-bubble-color);
-    border-radius: 61% 39% 45% 55% / 61% 24% 76% 39%;
-    position: absolute;
-    top: 32vh;
-    left: 30vw;
-}
-
-.bulle.deux {
-    height: 30vh;
-    width: 24vw;
-    background-color: var(--second-bubble-color);
-    border-radius: 20% 80% 45% 55% / 61% 62% 38% 39%;
-    position: absolute;
-    top: 33vh;
-    right: 28vw;
-}
-
 /*   ABOUT   */
 
 #about-section {
@@ -303,26 +303,6 @@ header {
 
 .presentation-container {
     margin-left: 5rem;
-}
-
-.bulle.trois {
-    height: 45vh;
-    width: 34vw;
-    background-color: var(--first-bubble-color);
-    border-radius: 61% 39% 45% 55% / 61% 24% 76% 39%;
-    position: absolute;
-    top: 132vh;
-    left: 30vw;
-}
-
-.bulle.quatre {
-    height: 30vh;
-    width: 24vw;
-    background-color: var(--second-bubble-color);
-    border-radius: 20% 80% 45% 55% / 61% 62% 38% 39%;
-    position: absolute;
-    top: 133vh;
-    right: 28vw;
 }
 
 /*   PROJECTS   */
@@ -358,26 +338,6 @@ header {
     &:hover {
         transform: scale(1.1);
     }
-}
-
-.bulle.cinq {
-    height: 45vh;
-    width: 34vw;
-    background-color: var(--first-bubble-color);
-    border-radius: 61% 39% 45% 55% / 61% 24% 76% 39%;
-    position: absolute;
-    top: 232vh;
-    left: 30vw;
-}
-
-.bulle.six {
-    height: 30vh;
-    width: 24vw;
-    background-color: var(--second-bubble-color);
-    border-radius: 20% 80% 45% 55% / 61% 62% 38% 39%;
-    position: absolute;
-    top: 233vh;
-    right: 28vw;
 }
 
 /*   SINGLE PROJECT   */
@@ -480,26 +440,6 @@ header {
     text-align: center;
 }
 
-.bulle.sept {
-    height: 45vh;
-    width: 34vw;
-    background-color: var(--first-bubble-color);
-    border-radius: 61% 39% 45% 55% / 61% 24% 76% 39%;
-    position: absolute;
-    top: 324vh;
-    left: 30vw;
-}
-
-.bulle.huit {
-    height: 30vh;
-    width: 24vw;
-    background-color: var(--second-bubble-color);
-    border-radius: 20% 80% 45% 55% / 61% 62% 38% 39%;
-    position: absolute;
-    top: 325vh;
-    right: 28vw;
-}
-
 .scroll-to-landing {
     rotate: 180deg;
 }
@@ -508,13 +448,11 @@ header {
     body {
         font-size: 0.9rem;
         padding: 0 1rem;
-        position: relative;
     }
 
     main {
         backdrop-filter: blur(1.3rem);
         z-index: 1;
-        position: absolute;
     }
 
     header {
@@ -625,17 +563,6 @@ header {
         display: initial;
     }
 
-    .bulle.trois {
-        height: 42vh;
-        top: 127vh;
-        left: 24vw;
-    }
-
-    .bulle.quatre {
-        top: 128vh;
-        right: 22vw;
-    }
-
     #projects-section {
         flex-direction: column;
         padding: 2rem 1rem;
@@ -651,17 +578,6 @@ header {
         margin-top: 8vh;
         grid-template-columns: 1fr;
         gap: 1rem;
-    }
-
-    .bulle.cinq {
-        height: 42vh;
-        top: 302vh;
-        left: 24vw;
-    }
-
-    .bulle.six {
-        top: 303vh;
-        right: 22vw;
     }
 
     .main-project {
@@ -714,20 +630,19 @@ header {
         margin-top: 2rem;
         padding: 0 1rem;
     }
-
-    .bulle.sept {
-        height: 42vh;
-        top: 414vh;
-        left: 24vw;
-    }
-
-    .bulle.huit {
-        top: 415vh;
-        right: 22vw;
-    }
 }
 
 @media screen and (min-width: 1400px) {
+    .bulle {
+        z-index: 0;
+    }
+
+    main,
+    header,
+    section {
+        z-index: 10;
+    }
+
     .fa-caret-down {
         font-size: 4.6rem;
     }
