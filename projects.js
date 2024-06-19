@@ -27,6 +27,8 @@ const aPenLife = {
 };
 
 const projects = [monCoinCadeau, siteClaire, siteCathy, aPenLife];
+let currentAlbum;
+let currentIndex;
 let currentImg;
 let maxIndex;
 
@@ -44,31 +46,27 @@ window.onload = (event) => {
             description.textContent = projects[i].description;
             illustrations[0].setAttribute('style', 'background-image: url(' + projects[i].illustration[0] + ')');
             illustrations[1].setAttribute('style', 'background-image: url(' + projects[i].illustration[1] + ')');
-            currentImg = projects[i].illustration[1];
-            console.log("current Img = " + currentImg);
+            currentIndex = 0;
+            currentAlbum = projects[i];
         }
     }
 }
 
-console.log(currentImg);
-
-// Carrousel illustration
+// Carrousel illustrations
 
 function goToPreviousImg() {
-    if (currentIndexImg == 0) {
-        currentIndexImg--;
-        document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
-    } else {
-        illustrations[0].setAttribute('style', 'background-image: url(' + projects[i].illustration[0] + ')');
-    }
+    // if (currentIndexImg == 0) {
+    //     currentIndexImg--;
+    //     document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
+    // } else {
+    illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex -1] + ')');
 }
 
 function goToNextImg() {
-    if (currentIndexImg < maxIndex) {
-        currentIndexImg++;
-        document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
-    } else {
-        document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[0] + ')';
-        currentIndexImg = 0;
-    }
+    // if (currentIndexImg < maxIndex) {
+    //     currentIndexImg++;
+    //     document.getElementById('diapo').style.backgroundImage = 'url(' + currentAlbum[currentIndexImg] + ')';
+    // } else {
+    illustrations[0].setAttribute('style', 'background-image: url(' + currentAlbum.illustration[currentIndex +1] + ')');
+       // currentIndexImg = 0;
 }
