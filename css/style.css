@@ -637,9 +637,8 @@ header {
         z-index: 0;
     }
 
-    main,
-    header {
-        z-index: 10;
+    main {
+        z-index: 1;
     }
 
     .fa-caret-down {
