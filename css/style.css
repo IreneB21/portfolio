@@ -131,6 +131,10 @@ header {
     text-transform: uppercase;
 }
 
+header img {
+    margin-right: 5.5rem;
+}
+
 .darkmode-checkbox-container {
     position: absolute;
     right: 7rem;
@@ -266,7 +270,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 2.5rem;
-    padding-top: 26vh;
+    padding-top: 24vh;
     text-align: center;
     word-wrap: break-word;
 }
@@ -311,7 +315,7 @@ header {
     display: flex;
     align-items: center;
     padding: var(--padding-section);
-    padding-top: 38vh;
+    padding-top: 30vh;
 }
 
 .presentation-projects {
@@ -438,6 +442,9 @@ header {
     text-transform: initial;
     padding: 0.5rem;
     text-align: center;
+    &:hover {
+        border: 2.1px solid black;
+    }
 }
 
 .scroll-to-landing {
@@ -452,20 +459,20 @@ header {
 
     main {
         backdrop-filter: blur(1.3rem);
-        -webkit-backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(9px);
         position: absolute;
         z-index: 2;
-        margin-right: 2rem;
-        margin-left: 2rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
 
     section {
-        min-height: 100vh;
+        min-height: 100%;
     }
 
     header {
         padding: var(--spacing);
-        z-index: 2;
+        z-index: 3;
     }
 
     .bulle {
@@ -553,13 +560,13 @@ header {
 
     .bulle.un {
         height: 42vh;
-        top: 32%;
-        left: 27%;
+        top: 35%;
+        left: 28%;
     }
 
     .bulle.deux {
-        top: 35%;
-        right: 25%;
+        top: 38%;
+        right: 26%;
     }
 
     #about-section {
