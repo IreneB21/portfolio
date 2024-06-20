@@ -22,7 +22,7 @@ const siteCathy = {
 const aPenLife = {
     id: "apenlife",
     title: "A Pen's Life",
-    description: "Voici un petit projet humoristique mais non moins fonctionnel, réalisé dans le cadre de ma formation de Développeuse PHP à la Wild Code School : le portfolio d’un stylo bic. Avec un frontend CSS/JS et un petit formulaire traité en PHP, des fois que quelqu’un veuille contacter Pen pour une mission ! Images générées par IA",
+    description: "Voici un petit projet humoristique mais non moins fonctionnel, réalisé dans le cadre de ma formation de Développeuse PHP à la Wild Code School : le portfolio d’un stylo bic. Avec un frontend CSS/JS et un petit formulaire traité en PHP, des fois que quelqu’un veuille contacter Pen pour une mission !",
     illustration: ['./images/a-pen-life/illustration1.jpg', './images/a-pen-life/illustration2.jpg', './images/a-pen-life/illustration3.jpg', './images/a-pen-life/illustration4.jpg', './images/a-pen-life/illustration5.jpg', './images/a-pen-life/illustration6.jpg', './images/a-pen-life/illustration7.jpg']
 };
 

@@ -482,8 +482,8 @@ header img {
 
     section {
         min-height: 90%;
-        padding-right: 3%;
-        padding-left: 3%;
+        padding-right: 4%;
+        padding-left: 4%;
     }
 
     header {
@@ -497,14 +497,13 @@ header img {
     }
 
     h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
         margin-bottom: 5.5vh;
     }
 
     .subtitle {
         font-size: 0.7rem;
         padding: 0.7rem 2rem;
-        ;
     }
 
     p {
@@ -545,7 +544,8 @@ header img {
     }
 
     #landing-page {
-        padding-top: 38%;
+        padding-top: 42%;
+        padding-bottom: 10%;
     }
 
     #landing-page h1 {
