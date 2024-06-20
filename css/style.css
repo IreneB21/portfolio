@@ -480,13 +480,13 @@ header img {
 
     section {
         min-height: 130vh;
-        padding-right: 2rem;
-        padding-left: 2rem;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 
     header {
         padding: var(--spacing);
-        position: absolute;
+        position: fixed;
         z-index: 3;
     }
 
@@ -543,16 +543,16 @@ header img {
     }
 
     #landing-page {
-        padding-top: 22%;
+        padding-top: 35%;
     }
 
     #landing-page h1 {
-        font-size: 4rem;
+        font-size: 4.2rem;
         max-width: 67%;
     }
 
     #landing-page i {
-        margin-top: 13vh;
+        margin-top: 11vh;
     }
 
     #about-section {
@@ -582,7 +582,7 @@ header img {
     #projects-section {
         flex-direction: column;
         padding: 2rem 1rem;
-        margin-top: 8vh;
+        margin-top: 12%;
     }
 
     .presentation-projects {
