@@ -462,11 +462,13 @@ header img {
     }
 
     .bulle.un {
+        width: 39%;
         top: 35%;
         left: 28%;
     }
 
     .bulle.deux {
+        width: 29%;
         top: 38%;
         right: 26%;
     }
@@ -479,9 +481,9 @@ header img {
     }
 
     section {
-        min-height: 80%;
-        padding-right: 4rem;
-        padding-left: 4rem;
+        min-height: 90%;
+        padding-right: 3%;
+        padding-left: 3%;
     }
 
     header {
@@ -543,11 +545,11 @@ header img {
     }
 
     #landing-page {
-        padding-top: 35%;
+        padding-top: 38%;
     }
 
     #landing-page h1 {
-        font-size: 4.2rem;
+        font-size: 4.5rem;
         max-width: 67%;
     }
 
