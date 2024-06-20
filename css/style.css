@@ -455,6 +455,12 @@ header {
         -webkit-backdrop-filter: blur(5px);
         position: absolute;
         z-index: 2;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    section {
+        min-height: 100vh;
     }
 
     header {
@@ -529,7 +535,7 @@ header {
     }
 
     #landing-page {
-        padding-top: 18vh;
+        padding-top: 22%;
     }
 
     #landing-page h1 {
@@ -547,13 +553,13 @@ header {
 
     .bulle.un {
         height: 42vh;
-        top: 27vh;
-        left: 24vw;
+        top: 32%;
+        left: 27%;
     }
 
     .bulle.deux {
-        top: 30vh;
-        right: 22vw;
+        top: 35%;
+        right: 25%;
     }
 
     #about-section {
@@ -673,7 +679,7 @@ header {
     }
 
     #landing-page {
-        padding-top: 27%;
+        padding-top: 27vh;
     }
 
     #landing-page h1 {
