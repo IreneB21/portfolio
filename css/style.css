@@ -457,36 +457,37 @@ header img {
         padding: 0 1rem;
     }
 
-    main {
-        backdrop-filter: blur(1.3rem);
-        -webkit-backdrop-filter: blur(9px);
-        position: absolute;
-        z-index: 2;
-        padding-right: 2rem;
-        padding-left: 2rem;
-    }
-
-    section {
-        min-height: 100%;
-    }
-
-    header {
-        padding: var(--spacing);
-        z-index: 3;
-    }
-
     .bulle {
         z-index: 0;
     }
 
     .bulle.un {
-        top: 31vh;
-        left: 16%;
+        top: 35%;
+        left: 28%;
     }
 
     .bulle.deux {
-        top: 33vh;
-        right: 17%;
+        top: 38%;
+        right: 26%;
+    }
+
+    main {
+        backdrop-filter: blur(1.3rem);
+        -webkit-backdrop-filter: blur(1rem);
+        position: absolute;
+        z-index: 2;
+    }
+
+    section {
+        min-height: 130vh;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    header {
+        padding: var(--spacing);
+        position: absolute;
+        z-index: 3;
     }
 
     header img {
@@ -552,21 +553,6 @@ header img {
 
     #landing-page i {
         margin-top: 13vh;
-    }
-
-    .bulle {
-        z-index: 0;
-    }
-
-    .bulle.un {
-        height: 42vh;
-        top: 35%;
-        left: 28%;
-    }
-
-    .bulle.deux {
-        top: 38%;
-        right: 26%;
     }
 
     #about-section {
