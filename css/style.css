@@ -491,6 +491,10 @@ header img {
         padding-left: 6rem;
     }
 
+    #landing-page, #about-section {
+        height: 100vh;
+    }
+
     header {
         padding: var(--spacing);
         position: fixed;
