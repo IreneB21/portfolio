@@ -452,6 +452,10 @@ header img {
 }
 
 @media screen and (max-width: 800px) {
+    html, body {
+        height: 100%;
+    }
+
     body {
         font-size: 0.9rem;
         padding: 0 1rem;
@@ -475,15 +479,16 @@ header img {
 
     main {
         backdrop-filter: blur(1.3rem);
-        -webkit-backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1.1rem);
         position: absolute;
         z-index: 2;
     }
 
     section {
-        min-height: 90%;
-        padding-right: 4%;
-        padding-left: 4%;
+        flex-grow: 1;
+        height: 100vh;
+        padding-right: 6rem;
+        padding-left: 6rem;
     }
 
     header {
@@ -544,8 +549,8 @@ header img {
     }
 
     #landing-page {
-        padding-top: 42%;
-        padding-bottom: 10%;
+        padding-top: 45%;
+        padding-bottom: 15%;
     }
 
     #landing-page h1 {
