@@ -482,7 +482,7 @@ header img {
     }
 
     .scroll-arrow-img {
-        display: initial;
+        display: block;
         max-width: 6rem;
         transform: rotate(90deg);
     }

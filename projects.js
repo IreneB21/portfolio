@@ -1,7 +1,7 @@
 const monCoinCadeau = {
     id: "moncoincadeau",
     title: "Mon Coin Cadeau",
-    description: "Site de liste d'envies avec session utilisateur, commentaires, partage sur réseaux sociaux.",
+    description: "Mon Coin Cadeau est un site de listes d'envies où l'utilisateur peut créer des whishlists pour lui ou pour ses proches, poster des commentaires, participer à l'achat d'un cadeau et partager sur les réseaux sociaux.",
     illustration: ['./images/mon-coin-cadeau/illustration1.png', './images/mon-coin-cadeau/illustration2.jpg', './images/mon-coin-cadeau/illustration3.png', './images/mon-coin-cadeau/illustration4.png', './images/mon-coin-cadeau/illustration5.png', './images/mon-coin-cadeau/illustration6.png']
 };
 
