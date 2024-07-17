@@ -24,6 +24,17 @@
     --second-bubble-color: #1A2A42;
 }
 
+:root[data-theme="dark"] .scroll-arrow-img {
+    -webkit-filter: invert(1);
+    -ms-filter: invert(1);
+    -o-filter: invert(1);
+    filter: invert(1);
+}
+
+:root[data-theme="dark"] header img {
+    filter: invert(1);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -442,6 +453,7 @@ header img {
     text-transform: initial;
     padding: 0.5rem;
     text-align: center;
+
     &:hover {
         border: 2.1px solid black;
     }
@@ -452,11 +464,15 @@ header img {
 }
 
 @media screen and (max-width: 800px) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         box-sizing: inherit;
     }
 
-    html, body {
+    html,
+    body {
         height: 100%;
     }
 
@@ -487,7 +503,8 @@ header img {
         transform: rotate(90deg);
     }
 
-    main {
+    main,
+    .main-project {
         backdrop-filter: blur(1.2rem);
         -webkit-backdrop-filter: blur(1.2rem);
         position: absolute;
