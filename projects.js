@@ -26,7 +26,14 @@ const aPenLife = {
     illustration: ['./images/a-pen-life/illustration1.jpg', './images/a-pen-life/illustration2.jpg', './images/a-pen-life/illustration3.jpg', './images/a-pen-life/illustration4.jpg', './images/a-pen-life/illustration5.jpg', './images/a-pen-life/illustration6.jpg', './images/a-pen-life/illustration7.jpg']
 };
 
-const projects = [monCoinCadeau, siteClaire, siteCathy, aPenLife];
+const helloNeighbors = {
+    id: "helloneighbors",
+    title: "Hello Neighbors",
+    description: "Hello Neighbors est une application web collaborative centrée sur les échanges entre habitants d’un même quartier. Ce projet, réalisé sur Angular et SpringBoot pour le passage du titre CDA, a pour objectif de recréer du lien social à l’échelle ultra-locale, en permettant aux gens vivant dans un même périmètre de partager des actualités, de proposer ou de demander de l’aide, d’organiser des événements, de prêter ou de donner des objets, ou encore de recommander des lieux et des services de proximité.",
+    illustration: ['./images/hello-neighbors/illustration1.png', './images/hello-neighbors/illustration2.png', './images/hello-neighbors/illustration3.png', './images/hello-neighbors/illustration4.png', './images/hello-neighbors/illustration5.png', './images/hello-neighbors/illustration6.png']
+}
+
+const projects = [monCoinCadeau, siteClaire, siteCathy, aPenLife, helloNeighbors];
 let currentAlbum;
 let currentIndex;
 let maxIndex;
